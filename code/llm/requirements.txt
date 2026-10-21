@@ -1,0 +1,6 @@
+# Module 1 — first LLM call. Pins match the sibling agentic-ai-workshop env.
+langchain-openai==1.1.7
+langchain-core==1.3.2
+openai==1.109.1
+httpx==0.28.1
+python-dotenv==1.2.2

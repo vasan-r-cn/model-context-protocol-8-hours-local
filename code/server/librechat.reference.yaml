@@ -1,0 +1,23 @@
+# Reference LibreChat config for the workshop MCP server.
+# Merge the mcpServers/mcpSettings blocks into the LibreChat host's
+# librechat.yaml, and set CISCO_MCP_TOKEN in LibreChat's .env
+# (must match MCP_AUTH_TOKEN on the server — see code/server/.env.example).
+
+version: 1.3.13
+
+mcpServers:
+  cisco-router:
+    type: streamable-http
+    url: http://172.18.1.2:8000/mcp
+    headers:
+      Authorization: "Bearer ${CISCO_MCP_TOKEN}"
+    serverInstructions: true   # pull the server's instructions from initialize
+    timeout: 60000             # SSH round-trips are slow; progress pings extend this
+    chatMenu: true
+
+# LibreChat's SSRF guard blocks private IPs by default — allow the lab
+# MCP server explicitly (use allowedAddresses, NOT allowedDomains: adding a
+# private host to allowedDomains flips it into strict-whitelist mode).
+mcpSettings:
+  allowedAddresses:
+    - "172.18.1.2:8000"

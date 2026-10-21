@@ -1,0 +1,33 @@
+# Module 5.3 — three servers, one agent.
+#   my_server  : your Module-4 server (device state, Streamable HTTP :8000)
+#   sdwan      : the SD-WAN MCP server  (vManage,       Streamable HTTP :7004)
+#   splunk     : splunk-mcp-server2     (log evidence,  SSE :8050)
+#
+# Start all three, then:
+#   export MCP_SERVER_URL=http://127.0.0.1:8000/mcp MCP_AUTH_TOKEN=cisco-mcp-workshop
+#   fast-agent go -c lab-three.yaml --servers my_server,sdwan,splunk \
+#     --model openrouter.$OPENROUTER_MODEL     # OPENROUTER_MODEL from .env
+#
+# Tools stay unambiguous because every name is prefixed <server>__<tool>.
+
+default_model: passthrough
+
+openrouter:
+  default_model: ${OPENROUTER_MODEL}
+
+mcp:
+  servers:
+    my_server:
+      transport: http
+      url: ${MCP_SERVER_URL}
+      headers:
+        Authorization: "Bearer ${MCP_AUTH_TOKEN}"
+      http_timeout_seconds: 60
+    sdwan:
+      transport: http
+      url: http://localhost:7004/mcp
+      http_timeout_seconds: 60
+    splunk:
+      transport: sse
+      url: http://localhost:8050/sse
+      http_timeout_seconds: 60

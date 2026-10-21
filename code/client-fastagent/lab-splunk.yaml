@@ -1,0 +1,20 @@
+# Module 5 — the Splunk MCP server (splunk/splunk-mcp-server2), consumed over SSE.
+#
+#   cd ../server-splunk && ./run.sh         # serves SSE on :8050
+#   fast-agent go -c lab-splunk.yaml --servers splunk \
+#     --model openrouter.$OPENROUTER_MODEL     # OPENROUTER_MODEL from .env
+#
+# --servers is mandatory with -c. Tools are namespaced splunk__<tool>.
+
+default_model: passthrough
+
+openrouter:
+  default_model: ${OPENROUTER_MODEL}
+
+mcp:
+  servers:
+    splunk:
+      # This server speaks SSE, not Streamable HTTP. Different transport keyword.
+      transport: sse
+      url: http://localhost:8050/sse
+      http_timeout_seconds: 60

@@ -1,0 +1,35 @@
+# Lab 1 — your own MCP server.
+#
+#   export MCP_SERVER_URL=http://<server-host>:80<seat>/mcp
+#   export MCP_AUTH_TOKEN=cisco-mcp-workshop
+#   fast-agent go -c lab1.yaml --servers my_server
+#
+# --servers is not optional: with -c and no --servers the agent starts with
+# zero tools and says "No tools are currently available".
+
+# passthrough runs no LLM at all — tools are invoked directly with
+#   -m '***CALL_TOOL my_server__list_devices {}'
+# Use it to prove wiring without spending tokens. Override per run with
+# --model, or change this line once a key is configured.
+default_model: passthrough
+
+# OpenRouter. The key lives in fastagent.secrets.yaml (or $OPENROUTER_API_KEY),
+# never here.
+openrouter:
+  default_model: ${OPENROUTER_MODEL}
+
+
+mcp:
+  servers:
+    my_server:
+      transport: http
+      url: ${MCP_SERVER_URL}
+      headers:
+        Authorization: "Bearer ${MCP_AUTH_TOKEN}"
+      http_timeout_seconds: 60
+
+      # forms | auto-cancel | none.  Default is none — the server then takes
+      # its "client does not support elicitation" path and applies changes
+      # without asking. Lab 4 B compares all three.
+      elicitation:
+        mode: forms

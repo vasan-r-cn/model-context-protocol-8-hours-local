@@ -1,0 +1,6 @@
+# Lab-tested versions (see docs/mcp-server-improvement-plan.md §5)
+fastapi==0.117.1
+uvicorn==0.36.0
+mcp==1.14.1
+netmiko==4.6.0
+PyYAML==6.0.3

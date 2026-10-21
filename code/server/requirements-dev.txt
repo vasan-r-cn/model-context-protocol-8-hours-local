@@ -1,0 +1,7 @@
+-r requirements.txt
+# anyio's pytest plugin, not pytest-asyncio: the MCP SDK's in-memory session is
+# an anyio cancel scope, and pytest-asyncio tears fixtures down in a different
+# task than it created them in ("Attempted to exit cancel scope in a different
+# task"). anyio keeps fixture and test in one task.
+pytest==8.4.2
+trio==0.32.0

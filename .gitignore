@@ -1,0 +1,28 @@
+# Python venvs / caches
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Secrets and local env — .env.example files ARE tracked (different filename)
+.env
+*.secrets.yaml
+fastagent.secrets.yaml
+
+# Personal / local-only (contain real API keys)
+my-notes/
+api-key-check.py
+
+# Lab runtime artifacts (regenerated per pod, not source)
+code/server/snapshots/
+code/server/changes/
+
+# Vendored third-party clones (fetched by setup.sh, not committed)
+code/server-splunk/upstream/
+
+# Binary cruft / logs
+*.deb
+fast-agent-log.jsonl
+
+# OS
+.DS_Store

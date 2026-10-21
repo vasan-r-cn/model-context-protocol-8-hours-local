@@ -1,0 +1,1661 @@
+cncloud::custom::bridge_info:
+  10.100.0.254: 10.100.0.254/24
+  10.100.1.254: 10.100.1.254/24
+  10.100.2.254: 10.100.2.254/24
+  10.100.3.254: 10.100.3.254/24
+  10.100.4.254: 10.100.4.254/24
+  10.2.0.254: 10.2.0.254/24
+  10.2.1.254: 10.2.1.254/24
+  10.2.2.254: 10.2.2.254/24
+  10.2.3.254: 10.2.3.254/24
+  10.2.4.254: 10.2.4.254/24
+  10.3.0.254: 10.3.0.254/24
+  10.3.1.254: 10.3.1.254/24
+  10.3.2.254: 10.3.2.254/24
+  10.3.3.254: 10.3.3.254/24
+  10.3.4.254: 10.3.4.254/24
+  10.4.0.254: 10.4.0.254/24
+  10.5.0.254: 10.5.0.254/24
+  10.6.0.254: 10.6.0.254/24
+  172.18.0.254: 172.18.0.254/24
+  172.18.1.254: 172.18.1.254/24
+  172.18.2.254: 172.18.2.254/24
+  172.18.3.254: 172.18.3.254/24
+  172.18.4.254: 172.18.4.254/24
+  172.18.5.254: 172.18.5.254/24
+  172.18.6.254: 172.18.6.254/24
+  172.18.7.254: 172.18.7.254/24
+  2.254.1.254: 2.254.1.254/24
+  2.254.2.254: 2.254.2.254/24
+cncloud::custom::commonparams:
+  multi_vm: 'no'
+  net_dev_ops: 'yes'
+cncloud::custom::configurations: '{}'
+cncloud::custom::connections:
+  con1:
+    base_ip: 172.18.0.0/16
+    dest_interface: GigabitEthernet3
+    dest_vm: public-internet6
+    interface_id: '2'
+    src_interface: eth1
+    src_vm: ciscovmanage3
+    subnet_length: '24'
+  con10:
+    base_ip: 10.3.0.0/16
+    dest_interface: Ethernet1/2
+    dest_vm: cisconexusnkv30
+    interface_id: '11'
+    src_interface: Ethernet1/1
+    src_vm: cisconexusnkv41
+    subnet_length: '24'
+  con11:
+    base_ip: 10.3.0.0/16
+    dest_interface: eth1
+    dest_vm: linuxdesktop53
+    interface_id: '12'
+    src_interface: Ethernet1/2
+    src_vm: cisconexusnkv41
+    subnet_length: '24'
+  con12:
+    base_ip: 10.3.0.0/16
+    dest_interface: Ethernet1/3
+    dest_vm: cisconexusnkv30
+    interface_id: '13'
+    src_interface: Ethernet1/1
+    src_vm: cisconexusnkv52
+    subnet_length: '24'
+  con13:
+    base_ip: 10.3.0.0/16
+    dest_interface: eth1
+    dest_vm: linuxdesktop54
+    interface_id: '14'
+    src_interface: Ethernet1/2
+    src_vm: cisconexusnkv52
+    subnet_length: '24'
+  con14:
+    base_ip: 172.18.0.0/16
+    dest_interface: GigabitEthernet6
+    dest_vm: public-internet6
+    interface_id: '15'
+    src_interface: GigabitEthernet2
+    src_vm: sdceightkv11
+    subnet_length: '24'
+  con15:
+    base_ip: 10.100.0.0/16
+    dest_interface: GigabitEthernet2
+    dest_vm: mpls55
+    interface_id: '16'
+    src_interface: GigabitEthernet4
+    src_vm: sdceightkv11
+    subnet_length: '24'
+  con16:
+    base_ip: 172.18.0.0/16
+    dest_interface: GigabitEthernet7
+    dest_vm: public-internet6
+    interface_id: '17'
+    src_interface: GigabitEthernet2
+    src_vm: sdceightkv24
+    subnet_length: '24'
+  con17:
+    base_ip: 10.100.0.0/16
+    dest_interface: GigabitEthernet3
+    dest_vm: mpls55
+    interface_id: '18'
+    src_interface: GigabitEthernet4
+    src_vm: sdceightkv24
+    subnet_length: '24'
+  con18:
+    base_ip: 10.4.0.0/16
+    dest_interface: GigabitEthernet2
+    dest_vm: sdceightkv62
+    interface_id: '19'
+    src_interface: eth1
+    src_vm: linuxdesktop64
+    subnet_length: '24'
+  con19:
+    base_ip: 10.5.0.0/16
+    dest_interface: GigabitEthernet2
+    dest_vm: sdceightkv63
+    interface_id: '20'
+    src_interface: eth1
+    src_vm: linuxdesktop65
+    subnet_length: '24'
+  con2:
+    base_ip: 172.18.0.0/16
+    dest_interface: GigabitEthernet4
+    dest_vm: public-internet6
+    interface_id: '3'
+    src_interface: ge0/0
+    src_vm: ciscovbond4
+    subnet_length: '24'
+  con20:
+    base_ip: 172.18.0.0/16
+    dest_interface: GigabitEthernet8
+    dest_vm: public-internet6
+    interface_id: '21'
+    src_interface: GigabitEthernet3
+    src_vm: sdceightkv62
+    subnet_length: '24'
+  con21:
+    base_ip: 10.100.0.0/16
+    dest_interface: GigabitEthernet4
+    dest_vm: mpls55
+    interface_id: '22'
+    src_interface: GigabitEthernet4
+    src_vm: sdceightkv62
+    subnet_length: '24'
+  con22:
+    base_ip: 172.18.0.0/16
+    dest_interface: GigabitEthernet9
+    dest_vm: public-internet6
+    interface_id: '23'
+    src_interface: GigabitEthernet3
+    src_vm: sdceightkv63
+    subnet_length: '24'
+  con23:
+    base_ip: 10.100.0.0/16
+    dest_interface: GigabitEthernet5
+    dest_vm: mpls55
+    interface_id: '24'
+    src_interface: GigabitEthernet4
+    src_vm: sdceightkv63
+    subnet_length: '24'
+  con24:
+    base_ip: 10.100.0.0/16
+    dest_interface: GigabitEthernet6
+    dest_vm: mpls55
+    interface_id: '25'
+    src_interface: GigabitEthernet2
+    src_vm: ciscoeightkv73
+    subnet_length: '24'
+  con25:
+    base_ip: 10.6.0.0/16
+    dest_interface: GigabitEthernet3
+    dest_vm: ciscoeightkv73
+    interface_id: '26'
+    src_interface: eth1
+    src_vm: linuxdesktop74
+    subnet_length: '24'
+  con26:
+    base_ip: 172.18.0.0/16
+    dest_interface: eth1
+    dest_vm: cclorchestrator78
+    interface_id: '27'
+    src_interface: GigabitEthernet10
+    src_vm: public-internet6
+    subnet_length: '24'
+  con3:
+    base_ip: 172.18.0.0/16
+    dest_interface: GigabitEthernet5
+    dest_vm: public-internet6
+    interface_id: '4'
+    src_interface: eth1
+    src_vm: ciscovsmart5
+    subnet_length: '24'
+  con4:
+    base_ip: 10.2.0.0/16
+    dest_interface: GigabitEthernet3
+    dest_vm: sdceightkv11
+    interface_id: '5'
+    src_interface: Ethernet1/1
+    src_vm: cisconexusnkv12
+    subnet_length: '24'
+  con5:
+    base_ip: 10.2.0.0/16
+    dest_interface: Ethernet1/2
+    dest_vm: cisconexusnkv12
+    interface_id: '6'
+    src_interface: Ethernet1/1
+    src_vm: cisconexusnkv13
+    subnet_length: '24'
+  con6:
+    base_ip: 10.2.0.0/16
+    dest_interface: Ethernet1/3
+    dest_vm: cisconexusnkv12
+    interface_id: '7'
+    src_interface: Ethernet1/1
+    src_vm: cisconexusnkv14
+    subnet_length: '24'
+  con7:
+    base_ip: 10.2.0.0/16
+    dest_interface: eth1
+    dest_vm: linuxdesktop19
+    interface_id: '8'
+    src_interface: Ethernet1/2
+    src_vm: cisconexusnkv13
+    subnet_length: '24'
+  con8:
+    base_ip: 10.2.0.0/16
+    dest_interface: eth1
+    dest_vm: linuxdesktop20
+    interface_id: '9'
+    src_interface: Ethernet1/2
+    src_vm: cisconexusnkv14
+    subnet_length: '24'
+  con9:
+    base_ip: 10.3.0.0/16
+    dest_interface: GigabitEthernet3
+    dest_vm: sdceightkv24
+    interface_id: '10'
+    src_interface: Ethernet1/1
+    src_vm: cisconexusnkv30
+    subnet_length: '24'
+cncloud::custom::pov_settings: ''
+cncloud::custom::service_data:
+  Mcp: 'yes'
+  azureiaas: 'yes'
+  ciscosdwanexim: 'yes'
+  cloudonramp: 'no'
+  cn-exlorer: 'yes'
+  console: 'yes'
+  enterpriseca: 'yes'
+  feature_template: 'no'
+  gitlab: 'yes'
+  gitlab_visual_studio: 'yes'
+  jenkins: 'yes'
+  nvcl: 'yes'
+  provision_app: 'yes'
+  rest_api: 'no'
+  sdwanapp: 'yes'
+  tcapp: 'no'
+  tcpreplay: 'no'
+cncloud::custom::template_scripts:
+  script1:
+    command: ls
+    description: testnew
+    exit_code:
+    - '0'
+    install_src: https://s3-us-west-2.amazonaws.com/sdcloud-scripts/generic/solution.sh
+    install_type: wget
+    workingdir: /usr/lib/cncloud/
+cncloud::custom::tenantinfo: ''
+cncloud::custom::vm_data:
+  custom-underlay1:
+    cclorchestrator78:
+      commands:
+      - sudo /sbin/sysctl -w net.ipv4.ip_forward=1
+      http_access: 'true'
+      http_path: auto
+      http_type: https
+      http_url_password: password
+      http_url_path: vnc.html?password={password}&path={nodename}websockify
+      image_dest: /var/lib/libvirt/images/r1.img
+      image_src: gs://django-drf-filepond-production/Criterion Enterprise/images/networkautomation_upgraded-2.qcow2
+      interfaces:
+        int1:
+          bridge_ip: 172.18.7.254
+          connected: 'True'
+          gateway: 172.18.7.2
+          intname: eth1
+          ipaddress: 172.18.7.1
+          mg_ipaddress: 192.168.116.16
+          netmask: 255.255.255.0
+      max_int: '10'
+      max_nodes: '100'
+      memory: '22528'
+      name: cclorchestrator
+      natrules:
+        ssh:
+          host_port: '20030'
+          nat_port: '22'
+      vcpu: '18'
+      version: '22.04'
+      vm_info:
+        hostname: cclorchestrator78
+        overwrite: 'true'
+        password: password
+        type: ubuntu
+        username: ubuntu
+      vnc_password: password
+    splunk78:
+      commands:
+      - sudo /sbin/sysctl -w net.ipv4.ip_forward=1
+      http_access: 'true'
+      http_path: auto
+      http_type: https
+      http_url_password: password
+      http_url_path: vnc.html?password={password}&path={nodename}websockify
+      image_dest: /var/lib/libvirt/images/r1.img
+      image_src: gs://django-drf-filepond-production/Criterion Enterprise/images/networkautomation_upgraded-2.qcow2
+      interfaces:
+        int1:
+          bridge_ip: 172.18.7.254
+          connected: 'True'
+          gateway: 172.18.7.2
+          intname: eth1
+          ipaddress: 172.18.7.1
+          mg_ipaddress: 192.168.116.16
+          netmask: 255.255.255.0
+      max_int: '10'
+      max_nodes: '100'
+      memory: '22528'
+      name: cclorchestrator
+      natrules:
+        ssh:
+          host_port: '20030'
+          nat_port: '22'
+      vcpu: '18'
+      version: '22.04'
+      vm_info:
+        hostname: cclorchestrator78
+        overwrite: 'true'
+        password: password
+        type: ubuntu
+        username: ubuntu
+      vnc_password: password
+    ciscoeightkv73:
+      bgp_as: '64512'
+      disk: '10'
+      image_dest: /var/lib/libvirt/images/c8kv.img
+      image_src: gs://django-drf-filepond-production/criterion networks DEV/images/17.06.03a___ciscoeightkv_atnms_17.06.03a.qcow2
+      interfaces:
+        int1:
+          bridge_ip: 10.100.4.254
+          connected: 'True'
+          connected_to: mpls55
+          gateway: 10.100.4.1
+          intname: GigabitEthernet2
+          ipaddress: 10.100.4.2
+          mg_ipaddress: 192.168.116.70
+          nat: no_nat
+          netmask: 255.255.255.0
+          remote_as: '64512'
+        int2:
+          bridge_ip: 10.6.0.254
+          connected: 'True'
+          gateway: ''
+          intname: GigabitEthernet3
+          ipaddress: 10.6.0.1
+          mg_ipaddress: 192.168.116.70
+          nat: inside
+          netmask: 255.255.255.0
+      max_int: '10'
+      max_nodes: '30'
+      memory: '4096'
+      name: ciscoeightkv
+      natrules:
+        ssh:
+          host_port: '20027'
+          nat_port: '22'
+      parent_gid: '5'
+      passthrough: 'true'
+      vcpu: '4'
+      version: 17.06.03a
+      virt_type: kvm
+      virtio: virtio
+      vm_info:
+        hostname: ciscoeightkv73
+        overwrite: 'true'
+        password: admin
+        type: ciscoeightkv_to_transport
+        username: admin
+    cisconexusnkv12:
+      commands:
+      - conf t
+      custom: 'true'
+      disk: '20'
+      e1000: 'true'
+      image_dest: /var/lib/libvirt/images/cisconexusnkv.img
+      image_src: gs://django-drf-filepond-beta/Criterion Enterprise/images/nexus9300v64.10.3.1.F.qcow2
+      interfaces:
+        int1:
+          bridge_ip: 10.2.0.254
+          connected: 'True'
+          gateway: ''
+          intname: Ethernet1/1
+          ipaddress: 10.2.0.2
+          mg_ipaddress: 192.168.116.19
+          mode: access
+          netmask: 255.255.255.0
+          vlanid: '10'
+        int2:
+          bridge_ip: 10.2.1.254
+          connected: 'True'
+          gateway: ''
+          intname: Ethernet1/2
+          ipaddress: 10.2.1.1
+          mg_ipaddress: 192.168.116.19
+          mode: access
+          netmask: 255.255.255.0
+          vlanid: '10'
+        int3:
+          bridge_ip: 10.2.2.254
+          connected: 'True'
+          gateway: ''
+          intname: Ethernet1/3
+          ipaddress: 10.2.2.1
+          mg_ipaddress: 192.168.116.19
+          mode: access
+          netmask: 255.255.255.0
+          vlanid: '10'
+      max_int: '20'
+      max_nodes: '10'
+      memory: '10240'
+      name: cisconexusnkv
+      natrules:
+        ssh:
+          host_port: '20005'
+          nat_port: '22'
+      networklayer: layer3
+      parent_gid: '2'
+      passthrough: 'true'
+      vcpu: '4'
+      version: 10.3.1.f
+      virt_type: kvm
+      vm_info:
+        hostname: cisconexusnkv12
+        overwrite: 'true'
+        password: cisco
+        type: cisconexusnkv
+        username: admin
+    cisconexusnkv13:
+      commands:
+      - conf t
+      custom: 'true'
+      disk: '20'
+      e1000: 'true'
+      image_dest: /var/lib/libvirt/images/cisconexusnkv.img
+      image_src: gs://django-drf-filepond-beta/Criterion Enterprise/images/nexus9300v64.10.3.1.F.qcow2
+      interfaces:
+        int1:
+          bridge_ip: 10.2.1.254
+          connected: 'True'
+          gateway: ''
+          intname: Ethernet1/1
+          ipaddress: 10.2.1.2
+          mg_ipaddress: 192.168.116.9
+          mode: access
+          netmask: 255.255.255.0
+          vlanid: '10'
+        int2:
+          bridge_ip: 10.2.3.254
+          connected: 'True'
+          gateway: ''
+          intname: Ethernet1/2
+          ipaddress: 10.2.3.2
+          mg_ipaddress: 192.168.116.9
+          mode: access
+          netmask: 255.255.255.0
+          vlanid: '10'
+      max_int: '20'
+      max_nodes: '10'
+      memory: '10240'
+      name: cisconexusnkv
+      natrules:
+        ssh:
+          host_port: '20006'
+          nat_port: '22'
+      networklayer: layer3
+      parent_gid: '2'
+      passthrough: 'true'
+      vcpu: '4'
+      version: 10.3.1.f
+      virt_type: kvm
+      vm_info:
+        hostname: cisconexusnkv13
+        overwrite: 'true'
+        password: cisco
+        type: cisconexusnkv
+        username: admin
+    cisconexusnkv14:
+      commands:
+      - conf t
+      custom: 'true'
+      disk: '20'
+      e1000: 'true'
+      image_dest: /var/lib/libvirt/images/cisconexusnkv.img
+      image_src: gs://django-drf-filepond-beta/Criterion Enterprise/images/nexus9300v64.10.3.1.F.qcow2
+      interfaces:
+        int1:
+          bridge_ip: 10.2.2.254
+          connected: 'True'
+          gateway: ''
+          intname: Ethernet1/1
+          ipaddress: 10.2.2.2
+          mg_ipaddress: 192.168.116.21
+          mode: access
+          netmask: 255.255.255.0
+          vlanid: '10'
+        int2:
+          bridge_ip: 10.2.4.254
+          connected: 'True'
+          gateway: ''
+          intname: Ethernet1/2
+          ipaddress: 10.2.4.2
+          mg_ipaddress: 192.168.116.21
+          mode: access
+          netmask: 255.255.255.0
+          vlanid: '10'
+      max_int: '20'
+      max_nodes: '10'
+      memory: '10240'
+      name: cisconexusnkv
+      natrules:
+        ssh:
+          host_port: '20007'
+          nat_port: '22'
+      networklayer: layer3
+      parent_gid: '2'
+      passthrough: 'true'
+      vcpu: '4'
+      version: 10.3.1.f
+      virt_type: kvm
+      vm_info:
+        hostname: cisconexusnkv14
+        overwrite: 'true'
+        password: cisco
+        type: cisconexusnkv
+        username: admin
+    cisconexusnkv30:
+      commands:
+      - conf t
+      custom: 'true'
+      disk: '20'
+      e1000: 'true'
+      image_dest: /var/lib/libvirt/images/cisconexusnkv.img
+      image_src: gs://django-drf-filepond-beta/Criterion Enterprise/images/nexus9300v64.10.3.1.F.qcow2
+      interfaces:
+        int1:
+          bridge_ip: 10.3.0.254
+          connected: 'True'
+          gateway: ''
+          intname: Ethernet1/1
+          ipaddress: 10.3.0.2
+          mg_ipaddress: 192.168.116.91
+          mode: access
+          netmask: 255.255.255.0
+          vlanid: '10'
+        int2:
+          bridge_ip: 10.3.1.254
+          connected: 'True'
+          gateway: ''
+          intname: Ethernet1/2
+          ipaddress: 10.3.1.1
+          mg_ipaddress: 192.168.116.91
+          mode: access
+          netmask: 255.255.255.0
+          vlanid: '10'
+        int3:
+          bridge_ip: 10.3.3.254
+          connected: 'True'
+          gateway: ''
+          intname: Ethernet1/3
+          ipaddress: 10.3.3.1
+          mg_ipaddress: 192.168.116.91
+          mode: access
+          netmask: 255.255.255.0
+          vlanid: '10'
+      max_int: '20'
+      max_nodes: '10'
+      memory: '10240'
+      name: cisconexusnkv
+      natrules:
+        ssh:
+          host_port: '20013'
+          nat_port: '22'
+      networklayer: layer3
+      parent_gid: '3'
+      passthrough: 'true'
+      vcpu: '4'
+      version: 10.3.1.f
+      virt_type: kvm
+      vm_info:
+        hostname: cisconexusnkv30
+        overwrite: 'true'
+        password: cisco
+        type: cisconexusnkv
+        username: admin
+    cisconexusnkv41:
+      commands:
+      - conf t
+      custom: 'true'
+      disk: '20'
+      e1000: 'true'
+      image_dest: /var/lib/libvirt/images/cisconexusnkv.img
+      image_src: gs://django-drf-filepond-beta/Criterion Enterprise/images/nexus9300v64.10.3.1.F.qcow2
+      interfaces:
+        int1:
+          bridge_ip: 10.3.1.254
+          connected: 'True'
+          gateway: ''
+          intname: Ethernet1/1
+          ipaddress: 10.3.1.2
+          mg_ipaddress: 192.168.116.18
+          mode: access
+          netmask: 255.255.255.0
+          vlanid: '10'
+        int2:
+          bridge_ip: 10.3.2.254
+          connected: 'True'
+          gateway: ''
+          intname: Ethernet1/2
+          ipaddress: 10.3.2.2
+          mg_ipaddress: 192.168.116.18
+          mode: access
+          netmask: 255.255.255.0
+          vlanid: '10'
+      max_int: '20'
+      max_nodes: '10'
+      memory: '10240'
+      name: cisconexusnkv
+      natrules:
+        ssh:
+          host_port: '20014'
+          nat_port: '22'
+      networklayer: layer3
+      parent_gid: '3'
+      passthrough: 'true'
+      vcpu: '4'
+      version: 10.3.1.f
+      virt_type: kvm
+      vm_info:
+        hostname: cisconexusnkv41
+        overwrite: 'true'
+        password: cisco
+        type: cisconexusnkv
+        username: admin
+    cisconexusnkv52:
+      commands:
+      - conf t
+      custom: 'true'
+      disk: '20'
+      e1000: 'true'
+      image_dest: /var/lib/libvirt/images/cisconexusnkv.img
+      image_src: gs://django-drf-filepond-beta/Criterion Enterprise/images/nexus9300v64.10.3.1.F.qcow2
+      interfaces:
+        int1:
+          bridge_ip: 10.3.3.254
+          connected: 'True'
+          gateway: ''
+          intname: Ethernet1/1
+          ipaddress: 10.3.3.2
+          mg_ipaddress: 192.168.116.14
+          mode: access
+          netmask: 255.255.255.0
+          vlanid: '10'
+        int2:
+          bridge_ip: 10.3.4.254
+          connected: 'True'
+          gateway: ''
+          intname: Ethernet1/2
+          ipaddress: 10.3.4.2
+          mg_ipaddress: 192.168.116.14
+          mode: access
+          netmask: 255.255.255.0
+          vlanid: '10'
+      max_int: '20'
+      max_nodes: '10'
+      memory: '10240'
+      name: cisconexusnkv
+      natrules:
+        ssh:
+          host_port: '20015'
+          nat_port: '22'
+      networklayer: layer3
+      parent_gid: '3'
+      passthrough: 'true'
+      vcpu: '4'
+      version: 10.3.1.f
+      virt_type: kvm
+      vm_info:
+        hostname: cisconexusnkv52
+        overwrite: 'true'
+        password: cisco
+        type: cisconexusnkv
+        username: admin
+    ciscovbond4:
+      commands:
+      - system ; sp-organization-name "Criterio1 - 19101";
+      copy_location: /home/admin/
+      custom: 'true'
+      disk: '10'
+      disk_src:
+      - gs://django-drf-filepond-production/criterion networks DEV/images/20.12.2___viptela-bond-20.12.2-genericx86-64.qcow2
+      image_dest: /var/lib/libvirt/images/ciscovbond.img
+      image_src: gs://django-drf-filepond-production/Criterion Enterprise/images/vbond-20.15.1-genericx86-64.qcow2
+      interfaces:
+        int1:
+          bridge_ip: 172.18.1.254
+          cidr: /24
+          connected: 'True'
+          gateway: 172.18.1.1
+          intname: ge0/0
+          ipaddress: 172.18.1.2
+          mg_ipaddress: 192.168.116.24
+          netmask: 255.255.255.0
+          vpn: '0'
+      max_int: '10'
+      max_nodes: '10'
+      memory: '8192'
+      name: ciscovbond
+      natrules:
+        ssh:
+          host_port: '20001'
+          nat_port: '22'
+      parent_gid: '1'
+      passthrough: 'true'
+      vcpu: '4'
+      version: 20.15.1
+      virt_type: kvm
+      virtio: virtio
+      vm_info:
+        hostname: ciscovbond4
+        orgname: Criterio1 - 19101
+        overwrite: 'true'
+        password: admin123
+        rootca: 'true'
+        siteid: '1000'
+        systemip: 172.27.1.3
+        type: ciscovbond
+        username: admin
+        vbond: 'true'
+        vbondip: 172.18.1.2
+    ciscovmanage3:
+      commands:
+      - system ; sp-organization-name "Criterio1 - 19101";
+      copy_location: /home/admin/
+      custom: 'true'
+      disk: '20'
+      disk_path:
+      - /var/lib/libvirt/images/vmanage-data.qcow2
+      disk_src:
+      - gs://criterion-images/default-images/viptela-19-2-0/data-disk/vmanage-data-new.qcow2
+      enable_external: 'false'
+      ha-type-active: 'true'
+      ha-type-standby: 'false'
+      http_access: 'true'
+      http_path: ''
+      http_type: https
+      image_dest: /var/lib/libvirt/images/ciscovmanage.img
+      image_src: gs://django-drf-filepond-production/Criterion Enterprise/images/viptela-vmanage-20.15.1-genericx86-64.qcow2
+      interfaces:
+        int1:
+          bridge_ip: 172.18.0.254
+          cidr: /24
+          connected: 'True'
+          gateway: 172.18.0.1
+          intname: eth1
+          ipaddress: 172.18.0.2
+          mg_ipaddress: 192.168.116.55
+          netmask: 255.255.255.0
+          tunnel: 'True'
+          vpn: '0'
+      max_int: '10'
+      max_nodes: '10'
+      memory: '32768'
+      name: ciscovmanage
+      natrules:
+        ssh:
+          host_port: '20000'
+          nat_port: '22'
+      parent_gid: '1'
+      passthrough: 'true'
+      tenant_type: single
+      vcpu: '16'
+      vendor: cisco
+      version: 20.15.1
+      virt_type: kvm
+      virtio: virtio
+      vm_info:
+        hostname: ciscovmanage3
+        orgname: Criterio1 - 19101
+        overwrite: 'true'
+        password: admin123
+        rootca: 'true'
+        siteid: '1002'
+        systemip: 172.27.1.4
+        type: ciscovmanage
+        username: admin
+        vbondip: 172.18.1.2
+        version: 20.15.1
+    ciscovsmart5:
+      commands:
+      - system ; sp-organization-name "Criterio1 - 19101";
+      copy_location: /home/admin/
+      custom: 'true'
+      disk: '10'
+      image_dest: /var/lib/libvirt/images/ciscovsmart.img
+      image_src: gs://django-drf-filepond-production/Criterion Enterprise/images/viptela-smart-20.15.1-genericx86-64.qcow2
+      interfaces:
+        int1:
+          bridge_ip: 172.18.2.254
+          cidr: /24
+          connected: 'True'
+          gateway: 172.18.2.1
+          intname: eth1
+          ipaddress: 172.18.2.2
+          mg_ipaddress: 192.168.116.17
+          netmask: 255.255.255.0
+          tunnel: 'True'
+          vpn: '0'
+      max_int: '10'
+      max_nodes: '10'
+      memory: '8192'
+      name: ciscovsmart
+      natrules:
+        ssh:
+          host_port: '20002'
+          nat_port: '22'
+      parent_gid: '1'
+      passthrough: 'true'
+      vcpu: '4'
+      vendor: cisco
+      version: 20.15.1
+      virt_type: kvm
+      virtio: virtio
+      vm_info:
+        hostname: ciscovsmart5
+        orgname: Criterio1 - 19101
+        overwrite: 'true'
+        password: admin123
+        rootca: 'true'
+        siteid: '1001'
+        systemip: 172.27.1.5
+        type: ciscovsmart
+        username: admin
+        vbondip: 172.18.1.2
+    inetrouter:
+      image_dest: /var/lib/libvirt/images/r1.img
+      image_src: gs://criterion-images/default-images/clouds/cloud.qcow2
+      interfaces:
+        int1:
+          bridge_ip: virbr1
+          connected: 'True'
+          gateway: ''
+          intname: ens4
+          ipaddress: 192.168.123.253
+          mg_ipaddress: 192.168.116.84
+          netmask: 255.255.255.0
+        int2:
+          bridge_ip: 2.254.1.254
+          connected: 'True'
+          gateway: ''
+          intname: ens5
+          ipaddress: 2.254.1.2
+          mg_ipaddress: 192.168.116.84
+          netmask: 255.255.255.0
+        int3:
+          bridge_ip: 2.254.2.254
+          connected: 'True'
+          gateway: ''
+          intname: ens6
+          ipaddress: 2.254.2.2
+          mg_ipaddress: 192.168.116.84
+          netmask: 255.255.255.0
+      max_int: '10'
+      max_nodes: '1'
+      memory: '4096'
+      natrules:
+        ssh:
+          host_port: '3000'
+          nat_port: '22'
+      vcpu: '2'
+      vm_info:
+        backing: 'false'
+        hostname: InetRouter
+        overwrite: 'false'
+        password: criterion
+        type: new_inetrouter
+        username: ubuntu
+    linuxdesktop19:
+      commands:
+      - sudo /sbin/sysctl -w net.ipv4.ip_forward=1
+      disk: '30'
+      http_access: 'true'
+      http_path: auto
+      http_type: https
+      http_url_password: password
+      http_url_path: vnc.html?password={password}&path={nodename}websockify
+      image_dest: /var/lib/libvirt/images/r1.img
+      image_src: gs://django-drf-filepond-production/Criterion Enterprise/images/ubuntu22latest.qcow2
+      interfaces:
+        int1:
+          bridge_ip: 10.2.3.254
+          connected: 'True'
+          gateway: 10.2.3.2
+          intname: eth1
+          ipaddress: 10.2.3.1
+          mg_ipaddress: 192.168.116.93
+          netmask: 255.255.255.0
+      max_int: '10'
+      max_nodes: '25'
+      memory: '4096'
+      name: linuxdesktop
+      natrules:
+        https:
+          host_port: '20009'
+          nat_port: '6080'
+        ssh:
+          host_port: '20008'
+          nat_port: '22'
+      parent_gid: '2'
+      vcpu: '2'
+      version: '22.04'
+      vm_info:
+        hostname: linuxdesktop19
+        overwrite: 'true'
+        password: password
+        type: ubuntu
+        username: ubuntu
+      vnc_password: password
+    linuxdesktop20:
+      commands:
+      - sudo /sbin/sysctl -w net.ipv4.ip_forward=1
+      disk: '30'
+      http_access: 'true'
+      http_path: auto
+      http_type: https
+      http_url_password: password
+      http_url_path: vnc.html?password={password}&path={nodename}websockify
+      image_dest: /var/lib/libvirt/images/r1.img
+      image_src: gs://django-drf-filepond-production/Criterion Enterprise/images/ubuntu22latest.qcow2
+      interfaces:
+        int1:
+          bridge_ip: 10.2.4.254
+          connected: 'True'
+          gateway: 10.2.4.2
+          intname: eth1
+          ipaddress: 10.2.4.1
+          mg_ipaddress: 192.168.116.5
+          netmask: 255.255.255.0
+      max_int: '10'
+      max_nodes: '25'
+      memory: '8192'
+      name: linuxdesktop
+      natrules:
+        https:
+          host_port: '20011'
+          nat_port: '6080'
+        ssh:
+          host_port: '20010'
+          nat_port: '22'
+      parent_gid: '2'
+      vcpu: '2'
+      version: '22.04'
+      vm_info:
+        hostname: linuxdesktop20
+        overwrite: 'true'
+        password: password
+        type: ubuntu
+        username: ubuntu
+      vnc_password: password
+    linuxdesktop53:
+      commands:
+      - sudo /sbin/sysctl -w net.ipv4.ip_forward=1
+      disk: '30'
+      http_access: 'true'
+      http_path: auto
+      http_type: https
+      http_url_password: password
+      http_url_path: vnc.html?password={password}&path={nodename}websockify
+      image_dest: /var/lib/libvirt/images/r1.img
+      image_src: gs://django-drf-filepond-production/Criterion Enterprise/images/ubuntu22latest.qcow2
+      interfaces:
+        int1:
+          bridge_ip: 10.3.2.254
+          connected: 'True'
+          gateway: 10.3.2.2
+          intname: eth1
+          ipaddress: 10.3.2.1
+          mg_ipaddress: 192.168.116.40
+          netmask: 255.255.255.0
+      max_int: '10'
+      max_nodes: '25'
+      memory: '4096'
+      name: linuxdesktop
+      natrules:
+        https:
+          host_port: '20017'
+          nat_port: '6080'
+        ssh:
+          host_port: '20016'
+          nat_port: '22'
+      parent_gid: '3'
+      vcpu: '2'
+      version: '22.04'
+      vm_info:
+        hostname: linuxdesktop53
+        overwrite: 'true'
+        password: password
+        type: ubuntu
+        username: ubuntu
+      vnc_password: password
+    linuxdesktop54:
+      commands:
+      - sudo /sbin/sysctl -w net.ipv4.ip_forward=1
+      disk: '30'
+      http_access: 'true'
+      http_path: auto
+      http_type: https
+      http_url_password: password
+      http_url_path: vnc.html?password={password}&path={nodename}websockify
+      image_dest: /var/lib/libvirt/images/r1.img
+      image_src: gs://django-drf-filepond-production/Criterion Enterprise/images/ubuntu22latest.qcow2
+      interfaces:
+        int1:
+          bridge_ip: 10.3.4.254
+          connected: 'True'
+          gateway: 10.3.4.2
+          intname: eth1
+          ipaddress: 10.3.4.1
+          mg_ipaddress: 192.168.116.26
+          netmask: 255.255.255.0
+      max_int: '10'
+      max_nodes: '25'
+      memory: '4096'
+      name: linuxdesktop
+      natrules:
+        https:
+          host_port: '20019'
+          nat_port: '6080'
+        ssh:
+          host_port: '20018'
+          nat_port: '22'
+      parent_gid: '3'
+      vcpu: '2'
+      version: '22.04'
+      vm_info:
+        hostname: linuxdesktop54
+        overwrite: 'true'
+        password: password
+        type: ubuntu
+        username: ubuntu
+      vnc_password: password
+    linuxdesktop64:
+      commands:
+      - sudo /sbin/sysctl -w net.ipv4.ip_forward=1
+      disk: '30'
+      http_access: 'true'
+      http_path: auto
+      http_type: https
+      http_url_password: password
+      http_url_path: vnc.html?password={password}&path={nodename}websockify
+      image_dest: /var/lib/libvirt/images/r1.img
+      image_src: gs://django-drf-filepond-production/Criterion Enterprise/images/ubuntu22latest.qcow2
+      interfaces:
+        int1:
+          bridge_ip: 10.4.0.254
+          connected: 'True'
+          gateway: 10.4.0.1
+          intname: eth1
+          ipaddress: 10.4.0.2
+          mg_ipaddress: 192.168.116.28
+          netmask: 255.255.255.0
+      max_int: '10'
+      max_nodes: '25'
+      memory: '4096'
+      name: linuxdesktop
+      natrules:
+        https:
+          host_port: '20024'
+          nat_port: '6080'
+        ssh:
+          host_port: '20023'
+          nat_port: '22'
+      parent_gid: '4'
+      vcpu: '2'
+      version: '22.04'
+      vm_info:
+        hostname: linuxdesktop64
+        overwrite: 'true'
+        password: password
+        type: ubuntu
+        username: ubuntu
+      vnc_password: password
+    linuxdesktop65:
+      commands:
+      - sudo /sbin/sysctl -w net.ipv4.ip_forward=1
+      disk: '30'
+      http_access: 'true'
+      http_path: auto
+      http_type: https
+      http_url_password: password
+      http_url_path: vnc.html?password={password}&path={nodename}websockify
+      image_dest: /var/lib/libvirt/images/r1.img
+      image_src: gs://django-drf-filepond-production/Criterion Enterprise/images/ubuntu22latest.qcow2
+      interfaces:
+        int1:
+          bridge_ip: 10.5.0.254
+          connected: 'True'
+          gateway: 10.5.0.1
+          intname: eth1
+          ipaddress: 10.5.0.2
+          mg_ipaddress: 192.168.116.32
+          netmask: 255.255.255.0
+      max_int: '10'
+      max_nodes: '25'
+      memory: '4096'
+      name: linuxdesktop
+      natrules:
+        https:
+          host_port: '20026'
+          nat_port: '6080'
+        ssh:
+          host_port: '20025'
+          nat_port: '22'
+      parent_gid: '4'
+      vcpu: '2'
+      version: '22.04'
+      vm_info:
+        hostname: linuxdesktop65
+        overwrite: 'true'
+        password: password
+        type: ubuntu
+        username: ubuntu
+      vnc_password: password
+    linuxdesktop74:
+      commands:
+      - sudo /sbin/sysctl -w net.ipv4.ip_forward=1
+      disk: '30'
+      http_access: 'true'
+      http_path: auto
+      http_type: https
+      http_url_password: password
+      http_url_path: vnc.html?password={password}&path={nodename}websockify
+      image_dest: /var/lib/libvirt/images/r1.img
+      image_src: gs://django-drf-filepond-production/Criterion Enterprise/images/ubuntu22latest.qcow2
+      interfaces:
+        int1:
+          bridge_ip: 10.6.0.254
+          connected: 'True'
+          gateway: 10.6.0.1
+          intname: eth1
+          ipaddress: 10.6.0.2
+          mg_ipaddress: 192.168.116.34
+          netmask: 255.255.255.0
+      max_int: '10'
+      max_nodes: '25'
+      memory: '4096'
+      name: linuxdesktop
+      natrules:
+        https:
+          host_port: '20029'
+          nat_port: '6080'
+        ssh:
+          host_port: '20028'
+          nat_port: '22'
+      parent_gid: '5'
+      vcpu: '2'
+      version: '22.04'
+      vm_info:
+        hostname: linuxdesktop74
+        overwrite: 'true'
+        password: password
+        type: ubuntu
+        username: ubuntu
+      vnc_password: password
+    mpls55:
+      baseip: 10.100.0.0/16
+      bgp_as: '64512'
+      color: mpls
+      copy_location: bootflash
+      image_dest: /var/lib/libvirt/images/r1.img
+      image_src: gs://criterion-images/default-images/cisco/csr.qcow2
+      install_command: copy csr.cnf running-config
+      interfaces:
+        int1:
+          bridge_ip: 10.100.0.254
+          connected: 'True'
+          gateway: ''
+          intname: GigabitEthernet2
+          ipaddress: 10.100.0.1
+          mg_ipaddress: 192.168.116.81
+          netmask: 255.255.255.0
+        int2:
+          bridge_ip: 10.100.1.254
+          connected: 'True'
+          gateway: ''
+          intname: GigabitEthernet3
+          ipaddress: 10.100.1.1
+          mg_ipaddress: 192.168.116.81
+          netmask: 255.255.255.0
+        int3:
+          bridge_ip: 10.100.2.254
+          connected: 'True'
+          gateway: ''
+          intname: GigabitEthernet4
+          ipaddress: 10.100.2.1
+          mg_ipaddress: 192.168.116.81
+          netmask: 255.255.255.0
+        int4:
+          bridge_ip: 10.100.3.254
+          connected: 'True'
+          gateway: ''
+          intname: GigabitEthernet5
+          ipaddress: 10.100.3.1
+          mg_ipaddress: 192.168.116.81
+          netmask: 255.255.255.0
+        int5:
+          bridge_ip: 10.100.4.254
+          connected: 'True'
+          gateway: ''
+          intname: GigabitEthernet6
+          ipaddress: 10.100.4.1
+          mg_ipaddress: 192.168.116.81
+          neighbor_ip: 10.100.4.2
+          netmask: 255.255.255.0
+          remote_as: '64512'
+        int6:
+          bridge_ip: 2.254.1.254
+          connected: 'True'
+          gateway: ''
+          internet_conn: 'false'
+          intname: GigabitEthernet7
+          ipaddress: 2.254.1.1
+          mg_ipaddress: 192.168.116.81
+          netmask: 255.255.255.0
+      internet_connectivity: 'false'
+      max_int: '20'
+      max_nodes: '20'
+      memory: '4096'
+      name: mpls
+      natrules:
+        ssh:
+          host_port: '20020'
+          nat_port: '22'
+      provider: ''
+      vcpu: '2'
+      vm_info:
+        hostname: mpls55
+        overwrite: 'false'
+        password: cisco
+        type: transport
+        username: cisco
+    public-internet6:
+      baseip: 172.18.0.0/16
+      color: public-internet
+      copy_location: bootflash
+      image_dest: /var/lib/libvirt/images/r1.img
+      image_src: gs://criterion-images/default-images/cisco/csr.qcow2
+      install_command: copy csr.cnf running-config
+      interfaces:
+        int1:
+          bridge_ip: 2.254.2.254
+          connected: 'True'
+          gateway: ''
+          internet_conn: 'true'
+          intname: GigabitEthernet2
+          ipaddress: 2.254.2.1
+          mg_ipaddress: 192.168.116.78
+          netmask: 255.255.255.0
+        int2:
+          bridge_ip: 172.18.0.254
+          connected: 'True'
+          intname: GigabitEthernet3
+          ipaddress: 172.18.0.1
+          mg_ipaddress: 192.168.116.78
+          netmask: 255.255.255.0
+        int3:
+          bridge_ip: 172.18.1.254
+          connected: 'True'
+          intname: GigabitEthernet4
+          ipaddress: 172.18.1.1
+          mg_ipaddress: 192.168.116.78
+          netmask: 255.255.255.0
+        int4:
+          bridge_ip: 172.18.2.254
+          connected: 'True'
+          intname: GigabitEthernet5
+          ipaddress: 172.18.2.1
+          mg_ipaddress: 192.168.116.78
+          netmask: 255.255.255.0
+        int5:
+          bridge_ip: 172.18.3.254
+          connected: 'True'
+          gateway: ''
+          intname: GigabitEthernet6
+          ipaddress: 172.18.3.1
+          mg_ipaddress: 192.168.116.78
+          netmask: 255.255.255.0
+        int6:
+          bridge_ip: 172.18.4.254
+          connected: 'True'
+          gateway: ''
+          intname: GigabitEthernet7
+          ipaddress: 172.18.4.1
+          mg_ipaddress: 192.168.116.78
+          netmask: 255.255.255.0
+        int7:
+          bridge_ip: 172.18.5.254
+          connected: 'True'
+          gateway: ''
+          intname: GigabitEthernet8
+          ipaddress: 172.18.5.1
+          mg_ipaddress: 192.168.116.78
+          netmask: 255.255.255.0
+        int8:
+          bridge_ip: 172.18.6.254
+          connected: 'True'
+          gateway: ''
+          intname: GigabitEthernet9
+          ipaddress: 172.18.6.1
+          mg_ipaddress: 192.168.116.78
+          netmask: 255.255.255.0
+        int9:
+          bridge_ip: 172.18.7.254
+          connected: 'True'
+          gateway: ''
+          intname: GigabitEthernet10
+          ipaddress: 172.18.7.2
+          mg_ipaddress: 192.168.116.78
+          netmask: 255.255.255.0
+      max_int: '20'
+      max_nodes: '20'
+      memory: '4096'
+      name: public-internet
+      natrules:
+        ssh:
+          host_port: '20003'
+          nat_port: '22'
+      provider: ''
+      vcpu: '2'
+      vm_info:
+        hostname: public-internet6
+        overwrite: 'false'
+        password: cisco
+        type: transport
+        username: cisco
+    sdceightkv11:
+      commands:
+      - system ; sp-organization-name "Criterio1 - 19101";
+      copy_location: bootflash:/sdwan/usercfg/
+      custom: 'true'
+      disk: '10'
+      image_dest: /var/lib/libvirt/images/sdceightkv.img
+      image_src: gs://django-drf-filepond-production/Criterion Enterprise/images/sdceightkv_17.15.01a.qcow2
+      interfaces:
+        int1:
+          bridge_ip: 172.18.3.254
+          color: public-internet
+          connected: 'True'
+          encap: ipsec
+          gateway: 172.18.3.1
+          intname: GigabitEthernet2
+          ipaddress: 172.18.3.2
+          mg_ipaddress: 192.168.116.85
+          netmask: 255.255.255.0
+          tloc: 'false'
+          tlocinterface: none
+          tunnel: 'true'
+          vpn: '0'
+        int2:
+          bridge_ip: 10.2.0.254
+          color: default
+          connected: 'True'
+          encap: ipsec
+          gateway: 10.2.0.2
+          intname: GigabitEthernet3
+          ipaddress: 10.2.0.1
+          mg_ipaddress: 192.168.116.85
+          netmask: 255.255.255.0
+          tloc: 'false'
+          tlocinterface: none
+          tunnel: 'false'
+          vpn: '1'
+        int3:
+          bridge_ip: 10.100.0.254
+          color: mpls
+          connected: 'True'
+          encap: ipsec
+          gateway: 10.100.0.1
+          intname: GigabitEthernet4
+          ipaddress: 10.100.0.2
+          mg_ipaddress: 192.168.116.85
+          netmask: 255.255.255.0
+          tloc: 'false'
+          tlocinterface: none
+          tunnel: 'true'
+          vpn: '0'
+      max_int: '10'
+      max_nodes: '10'
+      memory: '8192'
+      name: sdceightkv
+      natrules:
+        ssh:
+          host_port: '20004'
+          nat_port: '22'
+      parent_gid: '2'
+      passthrough: 'true'
+      vcpu: '4'
+      version: 17.15.01
+      virt_type: kvm
+      virtio: virtio
+      vm_info:
+        hostname: sdceightkv11
+        orgname: Criterio1 - 19101
+        overwrite: 'true'
+        password: admin123
+        rootca: 'true'
+        siteid: '10'
+        systemip: 172.27.1.6
+        type: sdceightkv
+        username: admin
+        vbondip: 172.18.1.2
+    sdceightkv24:
+      commands:
+      - system ; sp-organization-name "Criterio1 - 19101";
+      copy_location: bootflash:/sdwan/usercfg/
+      custom: 'true'
+      disk: '10'
+      image_dest: /var/lib/libvirt/images/sdceightkv.img
+      image_src: gs://django-drf-filepond-production/Criterion Enterprise/images/sdceightkv_17.15.01a.qcow2
+      interfaces:
+        int1:
+          bridge_ip: 172.18.4.254
+          color: public-internet
+          connected: 'True'
+          encap: ipsec
+          gateway: 172.18.4.1
+          intname: GigabitEthernet2
+          ipaddress: 172.18.4.2
+          mg_ipaddress: 192.168.116.51
+          netmask: 255.255.255.0
+          tloc: 'false'
+          tlocinterface: none
+          tunnel: 'true'
+          vpn: '0'
+        int2:
+          bridge_ip: 10.3.0.254
+          color: default
+          connected: 'True'
+          encap: ipsec
+          gateway: 10.3.0.2
+          intname: GigabitEthernet3
+          ipaddress: 10.3.0.1
+          mg_ipaddress: 192.168.116.51
+          netmask: 255.255.255.0
+          tloc: 'false'
+          tlocinterface: none
+          tunnel: 'false'
+          vpn: '1'
+        int3:
+          bridge_ip: 10.100.1.254
+          color: mpls
+          connected: 'True'
+          encap: ipsec
+          gateway: 10.100.1.1
+          intname: GigabitEthernet4
+          ipaddress: 10.100.1.2
+          mg_ipaddress: 192.168.116.51
+          netmask: 255.255.255.0
+          tloc: 'false'
+          tlocinterface: none
+          tunnel: 'true'
+          vpn: '0'
+      max_int: '10'
+      max_nodes: '10'
+      memory: '8192'
+      name: sdceightkv
+      natrules:
+        ssh:
+          host_port: '20012'
+          nat_port: '22'
+      parent_gid: '3'
+      passthrough: 'true'
+      vcpu: '4'
+      version: 17.15.01
+      virt_type: kvm
+      virtio: virtio
+      vm_info:
+        hostname: sdceightkv24
+        orgname: Criterio1 - 19101
+        overwrite: 'true'
+        password: admin123
+        rootca: 'true'
+        siteid: '11'
+        systemip: 172.27.1.7
+        type: sdceightkv
+        username: admin
+        vbondip: 172.18.1.2
+    sdceightkv62:
+      commands:
+      - system ; sp-organization-name "Criterio1 - 19101";
+      copy_location: bootflash:/sdwan/usercfg/
+      custom: 'true'
+      disk: '10'
+      image_dest: /var/lib/libvirt/images/sdceightkv.img
+      image_src: gs://django-drf-filepond-production/Criterion Enterprise/images/sdceightkv_17.15.01a.qcow2
+      interfaces:
+        int1:
+          bridge_ip: 10.4.0.254
+          color: default
+          connected: 'True'
+          encap: ipsec
+          gateway: ''
+          intname: GigabitEthernet2
+          ipaddress: 10.4.0.1
+          mg_ipaddress: 192.168.116.52
+          netmask: 255.255.255.0
+          tloc: 'false'
+          tlocinterface: none
+          tunnel: 'false'
+          vpn: '1'
+        int2:
+          bridge_ip: 172.18.5.254
+          color: public-internet
+          connected: 'True'
+          encap: ipsec
+          gateway: 172.18.5.1
+          intname: GigabitEthernet3
+          ipaddress: 172.18.5.2
+          mg_ipaddress: 192.168.116.52
+          netmask: 255.255.255.0
+          tloc: 'false'
+          tlocinterface: none
+          tunnel: 'true'
+          vpn: '0'
+        int3:
+          bridge_ip: 10.100.2.254
+          color: mpls
+          connected: 'True'
+          encap: ipsec
+          gateway: 10.100.2.1
+          intname: GigabitEthernet4
+          ipaddress: 10.100.2.2
+          mg_ipaddress: 192.168.116.52
+          netmask: 255.255.255.0
+          tloc: 'false'
+          tlocinterface: none
+          tunnel: 'true'
+          vpn: '0'
+      max_int: '10'
+      max_nodes: '10'
+      memory: '8192'
+      name: sdceightkv
+      natrules:
+        ssh:
+          host_port: '20021'
+          nat_port: '22'
+      parent_gid: '4'
+      passthrough: 'true'
+      vcpu: '4'
+      version: 17.15.01
+      virt_type: kvm
+      virtio: virtio
+      vm_info:
+        hostname: sdceightkv62
+        orgname: Criterio1 - 19101
+        overwrite: 'true'
+        password: admin123
+        rootca: 'true'
+        siteid: '10'
+        systemip: 172.27.1.8
+        type: sdceightkv
+        username: admin
+        vbondip: 172.18.1.2
+    sdceightkv63:
+      commands:
+      - system ; sp-organization-name "Criterio1 - 19101";
+      copy_location: bootflash:/sdwan/usercfg/
+      custom: 'true'
+      disk: '10'
+      image_dest: /var/lib/libvirt/images/sdceightkv.img
+      image_src: gs://django-drf-filepond-production/Criterion Enterprise/images/sdceightkv_17.15.01a.qcow2
+      interfaces:
+        int1:
+          bridge_ip: 10.5.0.254
+          color: default
+          connected: 'True'
+          encap: ipsec
+          gateway: ''
+          intname: GigabitEthernet2
+          ipaddress: 10.5.0.1
+          mg_ipaddress: 192.168.116.94
+          netmask: 255.255.255.0
+          tloc: 'false'
+          tlocinterface: none
+          tunnel: 'false'
+          vpn: '1'
+        int2:
+          bridge_ip: 172.18.6.254
+          color: public-internet
+          connected: 'True'
+          encap: ipsec
+          gateway: 172.18.6.1
+          intname: GigabitEthernet3
+          ipaddress: 172.18.6.2
+          mg_ipaddress: 192.168.116.94
+          netmask: 255.255.255.0
+          tloc: 'false'
+          tlocinterface: none
+          tunnel: 'true'
+          vpn: '0'
+        int3:
+          bridge_ip: 10.100.3.254
+          color: mpls
+          connected: 'True'
+          encap: ipsec
+          gateway: 10.100.3.1
+          intname: GigabitEthernet4
+          ipaddress: 10.100.3.2
+          mg_ipaddress: 192.168.116.94
+          netmask: 255.255.255.0
+          tloc: 'false'
+          tlocinterface: none
+          tunnel: 'true'
+          vpn: '0'
+      max_int: '10'
+      max_nodes: '10'
+      memory: '8192'
+      name: sdceightkv
+      natrules:
+        ssh:
+          host_port: '20022'
+          nat_port: '22'
+      parent_gid: '4'
+      passthrough: 'true'
+      vcpu: '4'
+      version: 17.15.01
+      virt_type: kvm
+      virtio: virtio
+      vm_info:
+        hostname: sdceightkv63
+        orgname: Criterio1 - 19101
+        overwrite: 'true'
+        password: admin123
+        rootca: 'true'
+        siteid: '10'
+        systemip: 172.27.1.9
+        type: sdceightkv
+        username: admin
+        vbondip: 172.18.1.2

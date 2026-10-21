@@ -1,0 +1,49 @@
+Read-only tools
+
+get_interfaces
+1. "What interfaces does Router1 have and what are their states?"
+2. "Are any interfaces down on the router?"
+3. "Give me a table of interface names, IPs, and status."
+
+get_router_info
+4. "What IOS version is Router1 running?"
+5. "How long has the router been up? What's the hostname and serial number?"
+
+dynamic_show (allowlist test — key lab)
+6. "Show me the routing table on Router1." → show ip route
+7. "Any OSPF neighbors up?" → show ip ospf neighbor
+8. "What's the ARP table look like?" → show arp
+9. "What time does the router think it is?" → show clock
+10. "Run show running-config on the router." → must get rejected (not on allowlist) — good demo of guardrail + LLM retry behavior
+11. "Show CDP neighbors and tell me what's connected."
+
+snapshot_config
+12. "Take a snapshot of the current router config."
+13. "Backup Router1's configuration before we make changes."
+
+Config tools (gated)
+
+enable_config_tools (toggle + tools/list_changed)
+14. "Enable configuration tools on the MCP server." → then check LibreChat tool list refresh
+15. "Disable config tools again."
+
+create_loopback
+16. "Create loopback 101 on Router1." → (with config tools disabled first — should fail/tool absent, good negative test)
+17. "Create a loopback interface with ID 55 and verify it came up."
+
+configure_interface
+18. "Set IP 10.10.10.1/24 on Loopback55." (adjust interface to what exists)
+19. "Change the description... actually, configure Loopback101 with address 192.168.101.1 255.255.255.0, then show me the interface brief to confirm."
+
+Multi-tool / chained (best demo value)
+
+20. "Snapshot the config, then create loopback 77, then show ip interface brief — confirm the new interface appears."
+21. "Give me a health report on Router1: version, uptime, interface status, routing protocols, OSPF neighbors." → should chain 3–4 tools
+22. "Compare interface count before and after creating loopback 88."
+
+
+
+
+Notes:
+
+

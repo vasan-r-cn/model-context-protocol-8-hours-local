@@ -1,0 +1,19 @@
+# Module 5 — the SD-WAN MCP server (code/server-sdwan), Streamable HTTP on :7004.
+#
+#   cd ../server-sdwan && ./run.sh          # serves :7004/mcp
+#   fast-agent go -c lab-sdwan.yaml --servers sdwan \
+#     --model openrouter.$OPENROUTER_MODEL     # OPENROUTER_MODEL from .env
+#
+# --servers is mandatory with -c. Tools are namespaced sdwan__<tool>.
+
+default_model: passthrough
+
+openrouter:
+  default_model: ${OPENROUTER_MODEL}
+
+mcp:
+  servers:
+    sdwan:
+      transport: http
+      url: http://localhost:7004/mcp
+      http_timeout_seconds: 60

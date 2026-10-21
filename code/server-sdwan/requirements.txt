@@ -1,0 +1,4 @@
+# SD-WAN MCP server (FastMCP 2.x). Pin matches the sibling agentic-ai-workshop.
+fastmcp==2.14.3
+httpx==0.28.1
+python-dotenv==1.2.2
